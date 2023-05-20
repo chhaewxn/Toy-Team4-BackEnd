@@ -23,8 +23,7 @@ public class TweetService {
 
         return tweetRepository.save(
                 Tweet.builder()
-                        .title(requestDto.getTitle())
-                        .content(requestDto.getContent())
+                        .comment(requestDto.getComment())
                         .writer(writer)
                         .build()
         );

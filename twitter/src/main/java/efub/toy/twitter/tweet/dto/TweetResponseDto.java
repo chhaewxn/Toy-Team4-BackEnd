@@ -12,24 +12,21 @@ import java.time.LocalDateTime;
 public class TweetResponseDto {
     private Long tweetId;
     private String writerName;
-    private String title;
-    private String content;
+    private String comment;
     private LocalDateTime createdDate;
 
-    public TweetResponseDto(Long tweetId, String writerName, String title, String content, LocalDateTime createdDate) {
+    public TweetResponseDto(Long tweetId, String writerName, String comment, LocalDateTime createdDate) {
         this.tweetId = tweetId;
         this.writerName = writerName;
-        this.title = title;
-        this.content = content;
+        this.comment = comment;
         this.createdDate = createdDate;
     }
 
     public static TweetResponseDto from(Tweet tweet) {
         return new TweetResponseDto(
                 tweet.getTweetId(),
-                tweet.getWriter().getNickname(),
-                tweet.getTitle(),
-                tweet.getContent(),
+                tweet.getWriter().getUsername(),
+                tweet.getComment(),
                 tweet.getCreatedDate());
     }
 }
