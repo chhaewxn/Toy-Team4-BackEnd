@@ -9,20 +9,18 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class AccountResponseDto {
     private Long accountId;
-    private String email;
-    private String nickname;
-    private String bio;
+    private String username;
+    private String userId;
 
-    public AccountResponseDto(Long accountId, String email, String nickname, String bio) {
+    public AccountResponseDto(Long accountId, String username, String userId) {
         this.accountId = accountId;
-        this.email = email;
-        this.nickname = nickname;
-        this.bio = bio;
+        this.username = username;
+        this.userId = userId;
     }
     public static AccountResponseDto from(Account account) {
-        return new AccountResponseDto(account.getAccountId(),
-                account.getEmail(),
-                account.getNickname(),
-                account.getBio());
+        return new AccountResponseDto(
+                account.getAccountId(),
+                account.getUsername(),
+                account.getUserId());
     }
 }

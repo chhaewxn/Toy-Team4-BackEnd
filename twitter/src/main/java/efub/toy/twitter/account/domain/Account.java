@@ -20,26 +20,29 @@ public class Account extends BaseTimeEntity {
     private Long accountId;
 
     @Column(nullable = false, length = 60)
-    private String email;
+    private String username;
+
+    @Column(nullable = false, length = 60)
+    private String userId;
 
     @Column(nullable = false)
     private String encodedPassword;
 
+    /*
     @Column(nullable = false, updatable = false, length = 16)
     private String nickname;
     private String bio;
+     */
 
     @Enumerated(EnumType.STRING)
     private AccountStatus status;
 
     @Builder
-    public Account(String email, String password, String nickname,
-                   String bio) {
+    public Account(String username, String userId, String password) {
 
-        this.email = email;
+        this.username = username;
         this.encodedPassword = password;
-        this.nickname = nickname;
-        this.bio = bio;
+        this.userId = userId;
         this.status = REGISTERED;
     }
 }
