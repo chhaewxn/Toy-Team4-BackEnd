@@ -1,11 +1,12 @@
 package efub.toy.twitter.account.domain;
 
 import efub.toy.twitter.global.entity.BaseTimeEntity;
-import jakarta.persistence.*;
 import lombok.AccessLevel;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+
+import javax.persistence.*;
 
 import static efub.toy.twitter.account.domain.AccountStatus.REGISTERED;
 

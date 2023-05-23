@@ -4,10 +4,11 @@ import efub.toy.twitter.account.domain.Account;
 import efub.toy.twitter.account.dto.AccountResponseDto;
 import efub.toy.twitter.account.dto.SignUpRequestDto;
 import efub.toy.twitter.account.service.AccountService;
-import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
+
+import javax.validation.Valid;
 
 @RestController
 @RequestMapping("/accounts")

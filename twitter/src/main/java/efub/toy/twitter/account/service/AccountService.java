@@ -3,10 +3,11 @@ package efub.toy.twitter.account.service;
 import efub.toy.twitter.account.domain.Account;
 import efub.toy.twitter.account.dto.SignUpRequestDto;
 import efub.toy.twitter.account.repository.AccountRepository;
-import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
+import javax.persistence.EntityNotFoundException;
 
 @Service
 @Transactional
