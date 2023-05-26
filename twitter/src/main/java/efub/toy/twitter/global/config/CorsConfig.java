@@ -21,6 +21,7 @@ public class CorsConfig {
         // 만약 "https://abc.dkfj"라는 도메인을 전달받았다면, 아래 코드에 추가로 다음과 같이 입력합니다.
         // config.addAllowedOrigin("https://abc.dkfj/");
         config.addAllowedOrigin("http://localhost:3000/");
+        config.addAllowedOrigin("http://localhost:3001"); // 프론트엔드에서 오류 발생 후 추가한 코드
 
 
         config.addAllowedHeader("*");
