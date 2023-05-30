@@ -38,12 +38,12 @@ jobs:
       run: chmod +x ./twitter/gradlew
 
     - uses: actions/checkout@v2
-    - run: touch ./src/main/resources/application.yml
-    - run: echo "${{env.APPLICATION}}" > ./src/main/resources/application.yml
+    - run: touch ./twitter/src/main/resources/application.yml
+    - run: echo "${{env.APPLICATION}}" > ./twitter/src/main/resources/application.yml
     - uses: actions/upload-artifact@v2
       with:
         name: application.yml
-        path: ./src/main/resources/application.yml
+        path: ./twitter/src/main/resources/application.yml
 
     - name: Build with Gradle
       uses: gradle/gradle-build-action@0d13054264b0bb894ded474f08ebb30921341cee
